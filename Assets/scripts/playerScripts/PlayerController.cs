@@ -7,7 +7,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D body;
-
+   [SerializeField] public Animator Animator;
     Vector2 direction;
 
     [SerializeField]
@@ -44,6 +44,21 @@ public class PlayerController : MonoBehaviour
         body.velocity = direction;
 
     }
+
+    //void Attack()
+    //{
+    //    if (Input.GetButtonDown("Fire1"))
+    //    {
+    //        Debug.Log("yes");
+    //        Animator.SetBool("isFighting", true);
+    //    }
+    //    if (Input.GetButtonUp("Fire1"))
+    //    {
+    //        Debug.Log("yes");
+    //        Animator.SetBool("isFighting", false);
+    //    }
+        
+    //}
 
     void JumpCheck()
     {
@@ -113,12 +128,13 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         direction = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
-
+        Animator.SetFloat("speed",Mathf.Abs( Input.GetAxis("Horizontal")*speed));
         if (body.velocity.y < -0.1f)
         {
             direction = new Vector2(body.velocity.x, body.velocity.y * 1.1f);
         }
         JumpCheck();
+        
     }
 
 

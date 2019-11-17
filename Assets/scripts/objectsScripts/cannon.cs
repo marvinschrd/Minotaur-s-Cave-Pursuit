@@ -21,7 +21,9 @@ public class cannon : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         GameObject Arrow = Instantiate(prefabArrows, ArrowsSpawnPoint);
+        
         Arrow.GetComponent<Rigidbody2D>().velocity = Vector2.left * 10;
     }
 
