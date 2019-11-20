@@ -91,7 +91,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -174,17 +174,58 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 384
-        width: 112
-        height: 96
+        y: 258
+        width: 125
+        height: 222
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      outline:
+      - - {x: -224, y: 7}
+        - {x: -224, y: 231}
+        - {x: -95, y: 231}
+        - {x: -95, y: 7}
+      - - {x: -92, y: 188}
+        - {x: -94, y: 231}
+        - {x: 0, y: 231}
+        - {x: 1, y: 188}
+      - - {x: -93, y: 6}
+        - {x: -94, y: 52}
+        - {x: 1, y: 51}
+        - {x: 3, y: 6}
+      - - {x: 4, y: 6}
+        - {x: 1, y: 231}
+        - {x: 120, y: 230}
+        - {x: 124, y: 7}
+      - - {x: 122, y: 189}
+        - {x: 121, y: 230}
+        - {x: 224, y: 230}
+        - {x: 224, y: 189}
+      - - {x: 124, y: 7}
+        - {x: 123, y: 61}
+        - {x: 222, y: 61}
+        - {x: 223, y: 9}
+      - - {x: -141, y: -203}
+        - {x: -223, y: -109}
+        - {x: -224, y: -57}
+        - {x: -163, y: -56}
+        - {x: -136, y: -82}
+        - {x: -78, y: -146}
+        - {x: -86, y: -200}
+      - - {x: -33, y: -143}
+        - {x: -132, y: -49}
+        - {x: -132, y: 3}
+        - {x: -29, y: 1}
+        - {x: 22, y: -93}
+      - - {x: -25, y: -188}
+        - {x: 152, y: 3}
+        - {x: 224, y: 6}
+        - {x: 224, y: -47}
+        - {x: 33, y: -231}
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d22cec49b8553424dae187d333dae771
+      spriteID: 775cc14edb8d6fa41b0dae6888f1b0b8
       internalID: -5223684379702258464
       vertices: []
       indices: 
@@ -194,18 +235,18 @@ TextureImporter:
       name: tile_cave_bg_rock_1
       rect:
         serializedVersion: 2
-        x: 112
-        y: 384
-        width: 112
-        height: 96
+        x: 126
+        y: 437
+        width: 108
+        height: 41
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8284ecfe39b55be4caa23b8c95535bd9
+      spriteID: 6eae0375ff0c7c840a28f3302c8352d7
       internalID: -8319218148276469081
       vertices: []
       indices: 
@@ -215,18 +256,18 @@ TextureImporter:
       name: tile_cave_bg_rock_2
       rect:
         serializedVersion: 2
-        x: 224
-        y: 384
-        width: 112
-        height: 96
+        x: 125
+        y: 257
+        width: 110
+        height: 38
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84bb7ef98ff1b0543817be7be45aa2a0
+      spriteID: 2097515c6ea0ade47a969b3722b084c8
       internalID: -7599259443201611788
       vertices: []
       indices: 
@@ -236,18 +277,18 @@ TextureImporter:
       name: tile_cave_bg_rock_3
       rect:
         serializedVersion: 2
-        x: 336
-        y: 384
-        width: 112
-        height: 96
+        x: 236
+        y: 257
+        width: 116
+        height: 222
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa3e5748c7d0041468b11fa12208820c
+      spriteID: e18e984907297d346bc80ccbe4981634
       internalID: -4478735933895158202
       vertices: []
       indices: 
@@ -257,18 +298,18 @@ TextureImporter:
       name: tile_cave_bg_rock_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 288
-        width: 112
-        height: 96
+        x: 353
+        y: 441
+        width: 95
+        height: 39
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bf13c409f5a39d419446c9560839974
+      spriteID: f2ba955a9e92ae34ab5344c707214e4f
       internalID: -1598418692686921336
       vertices: []
       indices: 
@@ -278,18 +319,18 @@ TextureImporter:
       name: tile_cave_bg_rock_5
       rect:
         serializedVersion: 2
-        x: 112
-        y: 288
-        width: 112
-        height: 96
+        x: 353
+        y: 258
+        width: 92
+        height: 37
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46897d4f66619e742a68fa313d8325b8
+      spriteID: 99cf31a5b51e28144915e4334d10ddcc
       internalID: -3388355769740897156
       vertices: []
       indices: 
@@ -299,18 +340,18 @@ TextureImporter:
       name: tile_cave_bg_rock_6
       rect:
         serializedVersion: 2
-        x: 224
-        y: 288
-        width: 112
-        height: 96
+        x: 0
+        y: 112
+        width: 72
+        height: 79
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50e75799e5639c74fa0803b6592591a0
+      spriteID: 2cd7db3e50e1c21428a703ebd68f7013
       internalID: 1416135499924021661
       vertices: []
       indices: 
@@ -320,18 +361,18 @@ TextureImporter:
       name: tile_cave_bg_rock_7
       rect:
         serializedVersion: 2
-        x: 336
-        y: 288
-        width: 112
-        height: 96
+        x: 75
+        y: 44
+        width: 49
+        height: 122
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dc32a490e1da3c40bfcc62759f2ffb7
+      spriteID: 9d9793099fe42204fa267ba40fb8f194
       internalID: 6897591179460097686
       vertices: []
       indices: 
@@ -341,250 +382,19 @@ TextureImporter:
       name: tile_cave_bg_rock_8
       rect:
         serializedVersion: 2
-        x: 0
-        y: 192
-        width: 112
-        height: 96
+        x: 273
+        y: 102
+        width: 173
+        height: 154
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce23a6f5ba04057438cae438d335bf02
+      spriteID: 9841e38173fa0154e8f3cc3279be3e4f
       internalID: -7780685818607615303
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile_cave_bg_rock_9
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 192
-        width: 112
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1618dc0bac80e324a8431f50a4f0f235
-      internalID: -2383155109359548416
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile_cave_bg_rock_10
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 192
-        width: 112
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 606943db2a81c3a46aa92a340e13227c
-      internalID: 5946703973558094692
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile_cave_bg_rock_11
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 192
-        width: 112
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a66e7cc50c97899469108e654fe7b3f9
-      internalID: 3941654220464100585
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile_cave_bg_rock_12
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 96
-        width: 112
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b7ee8c338b20e4c4aa701cd944de4199
-      internalID: 2801750755886984770
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile_cave_bg_rock_13
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 96
-        width: 112
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 94b5936f1a83d574ba46ec80ff8cec7f
-      internalID: -2120238056453191650
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile_cave_bg_rock_14
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 96
-        width: 112
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bb4fb46105b29ff45bbc3f6446c3af2a
-      internalID: 2198653352008939368
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile_cave_bg_rock_15
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 96
-        width: 112
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f8543607f2e44d14c8b441574cc0c074
-      internalID: -5863504802767320660
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile_cave_bg_rock_16
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 112
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d66fb71d5e001b4298aff6f0181e830
-      internalID: 952994763268927210
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile_cave_bg_rock_17
-      rect:
-        serializedVersion: 2
-        x: 112
-        y: 0
-        width: 112
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aaff944207df7354fa4373bddb27d170
-      internalID: -2067841875766685403
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile_cave_bg_rock_18
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 112
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b1764c808e38e184b9d3de4b5aa78679
-      internalID: -3377951944515165505
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile_cave_bg_rock_19
-      rect:
-        serializedVersion: 2
-        x: 336
-        y: 0
-        width: 112
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88be1b952fc81b145ad911567422595f
-      internalID: 241747179872071320
       vertices: []
       indices: 
       edges: []

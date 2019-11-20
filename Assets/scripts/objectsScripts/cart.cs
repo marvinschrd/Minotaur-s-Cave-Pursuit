@@ -7,7 +7,9 @@ public class cart : MonoBehaviour
 
    private Rigidbody2D body;
    private Vector2 direction;
-    [SerializeField] float speed = 0;
+   private bool isTriggered = false;
+    
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -23,18 +25,25 @@ public class cart : MonoBehaviour
     void Update()
     {
         
+        if (isTriggered)
+        {
+            
+           if(body.velocity.magnitude <1)
+            {
+                Debug.Log(body.velocity.y);
+                direction = new Vector2(1, body.velocity.y);
+                body.velocity = direction;
+            }
+
+        }
+        
     }
 
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(body.velocity.y);
-        direction = new Vector2(1*speed, body.velocity.y);
-        body.velocity = direction;
-        //if (body.velocity.y < -0.1f)
-        //{
-        //    direction = new Vector2(body.velocity.x, body.velocity.y * 1.1f);
-        //}
+        isTriggered = true;
+        
     }
 
 }

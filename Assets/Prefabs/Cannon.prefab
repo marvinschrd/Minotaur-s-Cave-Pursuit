@@ -99,6 +99,7 @@ MonoBehaviour:
   prefabCannonball: {fileID: 6659983141294657682, guid: cfba3f4304836f14ca63144880389da4,
     type: 3}
   cannonBallSpawnPoint: {fileID: 5657464876936116744}
+  fireDuration: 2
 --- !u!61 &847770798074401208
 BoxCollider2D:
   m_ObjectHideFlags: 0
