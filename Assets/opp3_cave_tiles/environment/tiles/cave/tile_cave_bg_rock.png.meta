@@ -170,68 +170,6 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tile_cave_bg_rock_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 258
-        width: 125
-        height: 222
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -224, y: 7}
-        - {x: -224, y: 231}
-        - {x: -95, y: 231}
-        - {x: -95, y: 7}
-      - - {x: -92, y: 188}
-        - {x: -94, y: 231}
-        - {x: 0, y: 231}
-        - {x: 1, y: 188}
-      - - {x: -93, y: 6}
-        - {x: -94, y: 52}
-        - {x: 1, y: 51}
-        - {x: 3, y: 6}
-      - - {x: 4, y: 6}
-        - {x: 1, y: 231}
-        - {x: 120, y: 230}
-        - {x: 124, y: 7}
-      - - {x: 122, y: 189}
-        - {x: 121, y: 230}
-        - {x: 224, y: 230}
-        - {x: 224, y: 189}
-      - - {x: 124, y: 7}
-        - {x: 123, y: 61}
-        - {x: 222, y: 61}
-        - {x: 223, y: 9}
-      - - {x: -141, y: -203}
-        - {x: -223, y: -109}
-        - {x: -224, y: -57}
-        - {x: -163, y: -56}
-        - {x: -136, y: -82}
-        - {x: -78, y: -146}
-        - {x: -86, y: -200}
-      - - {x: -33, y: -143}
-        - {x: -132, y: -49}
-        - {x: -132, y: 3}
-        - {x: -29, y: 1}
-        - {x: 22, y: -93}
-      - - {x: -25, y: -188}
-        - {x: 152, y: 3}
-        - {x: 224, y: 6}
-        - {x: 224, y: -47}
-        - {x: 33, y: -231}
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 775cc14edb8d6fa41b0dae6888f1b0b8
-      internalID: -5223684379702258464
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: tile_cave_bg_rock_1
       rect:
         serializedVersion: 2
@@ -240,7 +178,7 @@ TextureImporter:
         width: 108
         height: 41
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -261,7 +199,7 @@ TextureImporter:
         width: 110
         height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -282,7 +220,7 @@ TextureImporter:
         width: 116
         height: 222
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -303,7 +241,7 @@ TextureImporter:
         width: 95
         height: 39
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -324,7 +262,7 @@ TextureImporter:
         width: 92
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -345,7 +283,7 @@ TextureImporter:
         width: 72
         height: 79
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -366,7 +304,7 @@ TextureImporter:
         width: 49
         height: 122
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -387,7 +325,7 @@ TextureImporter:
         width: 173
         height: 154
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -395,6 +333,27 @@ TextureImporter:
       bones: []
       spriteID: 9841e38173fa0154e8f3cc3279be3e4f
       internalID: -7780685818607615303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_cave_bg_rock_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 258
+        width: 124
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef5b61b306a80bb428e391c9eb03aba8
+      internalID: -5223684379702258464
       vertices: []
       indices: 
       edges: []
