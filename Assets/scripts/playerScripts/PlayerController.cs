@@ -131,7 +131,7 @@ public class PlayerController : MonoBehaviour
         Animator.SetFloat("speed",Mathf.Abs( Input.GetAxis("Horizontal")*speed));
         if (body.velocity.y < -0.1f)
         {
-            direction = new Vector2(body.velocity.x, body.velocity.y * 1.1f);
+            direction = new Vector2(body.velocity.x, body.velocity.y * 1.01f);
         }
         JumpCheck();
         
@@ -142,6 +142,10 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.color = Color.blue;
         Gizmos.DrawLine((Vector2)transform.position, (Vector2)transform.position + Vector2.down * raycastJumpLength);
+        Gizmos.DrawLine((Vector2)transform.position, (Vector2)transform.position + Vector2.right * raycastJumpLength);
+        Gizmos.DrawLine((Vector2)transform.position, (Vector2)transform.position + Vector2.left * raycastJumpLength);
+
+
     }
     //void OnTriggerStay2D(Collider2D other)
     //{
