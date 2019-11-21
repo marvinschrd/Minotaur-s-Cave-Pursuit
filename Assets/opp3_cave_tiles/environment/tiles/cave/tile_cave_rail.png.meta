@@ -53,6 +53,21 @@ TextureImporter:
   - first:
       213: 1901486002270875253
     second: tile_cave_rail_16
+  - first:
+      213: 730999639553999152
+    second: tile_cave_rail_17
+  - first:
+      213: 7789002047461330602
+    second: tile_cave_rail_18
+  - first:
+      213: -1567418885205616449
+    second: tile_cave_rail_19
+  - first:
+      213: 7748793481265756357
+    second: tile_cave_rail_20
+  - first:
+      213: -1099025277559237674
+    second: tile_cave_rail_21
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -93,7 +108,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 64
@@ -182,69 +197,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tile_cave_rail_1
-      rect:
-        serializedVersion: 2
-        x: 95
-        y: 215
-        width: 94
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7c0fc81dab914324583c6dbfbc0a7524
-      internalID: 8165808592125002934
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile_cave_rail_2
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 155
-        width: 43
-        height: 25
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7dd031afaaa2a54aa1c159c478ebe3b
-      internalID: 7868594278506198565
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile_cave_rail_3
-      rect:
-        serializedVersion: 2
-        x: 13
-        y: 125
-        width: 37
-        height: 21
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad12572971e5bce4088d1c4c90ca348e
-      internalID: 6707190466940781127
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: tile_cave_rail_4
       rect:
         serializedVersion: 2
@@ -324,48 +276,6 @@ TextureImporter:
       bones: []
       spriteID: bcc0f72199563874ba68d8cbf63800a1
       internalID: 8502526292980813628
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile_cave_rail_8
-      rect:
-        serializedVersion: 2
-        x: 11
-        y: 84
-        width: 40
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 98ccc0f43723f35429453238ec556b9e
-      internalID: -4992810057668191358
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tile_cave_rail_9
-      rect:
-        serializedVersion: 2
-        x: 61
-        y: 54
-        width: 66
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: da5b76814d348694891ec89bda77e693
-      internalID: -7321521895170968127
       vertices: []
       indices: 
       edges: []
@@ -502,10 +412,10 @@ TextureImporter:
         serializedVersion: 2
         x: 189
         y: 215
-        width: 47
+        width: 38
         height: 27
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -513,6 +423,216 @@ TextureImporter:
       bones: []
       spriteID: f599ca8e28b09d549ae3ba9c7ed69958
       internalID: 1901486002270875253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_cave_rail_2
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 158
+        width: 22
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a85ea7e11e7084ebb219a1f754b825
+      internalID: 7868594278506198565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_cave_rail_3
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 158
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975a3c05b290fce4c8f2f89fbf66e75e
+      internalID: 6707190466940781127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_cave_rail_8
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 125
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14cae9b3af74e9b46adcb366867c8778
+      internalID: -4992810057668191358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_cave_rail_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 125
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f483a5e9cf7167846846353e17447d67
+      internalID: 730999639553999152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_cave_rail_18
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 85
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5e95c3dab4d8c45828c5265ab810f9
+      internalID: 7789002047461330602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_cave_rail_19
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 85
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a397a0c3504124743acd9bb084d71fcd
+      internalID: -1567418885205616449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_cave_rail_1
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 216
+        width: 37
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9924cde1a1e4ef74d878c146acb6b97f
+      internalID: 8165808592125002934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_cave_rail_20
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 215
+        width: 54
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b2f2070ee9a447459832f0d4642b8f3
+      internalID: 7748793481265756357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_cave_rail_9
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 52
+        width: 41
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a681403152984a4c87301d7426b2812
+      internalID: -7321521895170968127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tile_cave_rail_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 52
+        width: 31
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352b25642c28db74a95bf5268271f242
+      internalID: -1099025277559237674
       vertices: []
       indices: 
       edges: []

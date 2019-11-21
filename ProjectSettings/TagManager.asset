@@ -17,7 +17,7 @@ TagManager:
   - cart
   - player
   - background
-  - 
+  - wall
   - 
   - 
   - 
@@ -44,9 +44,21 @@ TagManager:
   - name: background
     uniqueID: 1834138699
     locked: 0
+  - name: wallBackground
+    uniqueID: 3820057023
+    locked: 0
+  - name: platform
+    uniqueID: 4004627833
+    locked: 0
+  - name: rails
+    uniqueID: 1300913669
+    locked: 0
   - name: player
     uniqueID: 2360635111
     locked: 0
   - name: cart
     uniqueID: 1123519323
+    locked: 0
+  - name: foreGround
+    uniqueID: 2514773697
     locked: 0

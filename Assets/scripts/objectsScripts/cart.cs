@@ -31,7 +31,7 @@ public class cart : MonoBehaviour
            if(body.velocity.magnitude <1)
             {
                 Debug.Log(body.velocity.y);
-                direction = new Vector2(1, body.velocity.y);
+                direction = new Vector2(2, body.velocity.y);
                 body.velocity = direction;
             }
 
