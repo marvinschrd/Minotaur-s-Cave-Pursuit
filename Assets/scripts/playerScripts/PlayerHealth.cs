@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
         currentHealth -= dmg;
         //animator.SetFloat("damage", dmg);
         Debug.Log("Current health = " + currentHealth);
-       
+        //animator.SetFloat("damage", 0);
         if (currentHealth <= 0)
         {
             animator.SetBool("isDead", true);

@@ -47,6 +47,9 @@ TagManager:
   - name: wallBackground
     uniqueID: 3820057023
     locked: 0
+  - name: wallBackground2
+    uniqueID: 2249992525
+    locked: 0
   - name: platform
     uniqueID: 4004627833
     locked: 0

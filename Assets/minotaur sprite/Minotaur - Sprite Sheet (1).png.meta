@@ -157,13 +157,13 @@ TextureImporter:
     second: Minotaur - Sprite Sheet (1)_50
   - first:
       213: -7106048782565011844
-    second: Minotaur - Sprite Sheet (1)_51
+    second: hurt1
   - first:
       213: -564086863566474122
-    second: Minotaur - Sprite Sheet (1)_52
+    second: hurt2
   - first:
       213: -450791140783453891
-    second: Minotaur - Sprite Sheet (1)_53
+    second: hurt3
   - first:
       213: 9180183054213447950
     second: Minotaur - Sprite Sheet (1)_54
@@ -1604,7 +1604,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minotaur - Sprite Sheet (1)_51
+      name: hurt1
       rect:
         serializedVersion: 2
         x: 28
@@ -1625,7 +1625,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minotaur - Sprite Sheet (1)_52
+      name: hurt2
       rect:
         serializedVersion: 2
         x: 124
@@ -1646,10 +1646,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Minotaur - Sprite Sheet (1)_53
+      name: hurt3
       rect:
         serializedVersion: 2
-        x: 220
+        x: 221
         y: 1088
         width: 52
         height: 41
