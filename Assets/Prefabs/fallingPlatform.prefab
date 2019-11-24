@@ -67,7 +67,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -290339463
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 2383762411496401996, guid: 7e9b4ad90563fb24e87f438573b8b6b6,
     type: 3}
@@ -106,8 +106,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8561865457491958829}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.35362625, y: 0.0071206093, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.3462, y: 0.0052, z: 0}
+  m_LocalScale: {x: 1.0401, y: 1.0087, z: 1}
   m_Children: []
   m_Father: {fileID: 8561865457740081170}
   m_RootOrder: 0
@@ -148,7 +148,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -290339463
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 9105279816279040014, guid: 7e9b4ad90563fb24e87f438573b8b6b6,
     type: 3}
@@ -229,7 +229,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -290339463
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 2383762411496401996, guid: 7e9b4ad90563fb24e87f438573b8b6b6,
     type: 3}
@@ -310,7 +310,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -290339463
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -8761330790844820830, guid: 7e9b4ad90563fb24e87f438573b8b6b6,
     type: 3}
@@ -354,7 +354,7 @@ Transform:
   m_GameObject: {fileID: 8561865457740081164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 13.149374, y: -6.8291206, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.9912, z: 1}
   m_Children:
   - {fileID: 8561865457491958830}
   - {fileID: 8561865457580519416}
@@ -399,7 +399,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -290339463
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 5207274173722493727, guid: 7e9b4ad90563fb24e87f438573b8b6b6,
     type: 3}
