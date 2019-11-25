@@ -36,7 +36,7 @@ public class CrushingBlock : MonoBehaviour
         switch (state)
         {
             case State.IDLE:
-                Debug.Log("IDLE");
+              //  Debug.Log("IDLE");
                 timeToFall = timerToFall;
                 timeToUp = TimerToUp;
                 isTriggered = false;
@@ -44,9 +44,9 @@ public class CrushingBlock : MonoBehaviour
                 break;
             case State.FALLING:
                 {
-                    Debug.Log("FALLING");
+                   // Debug.Log("FALLING");
                     timeToFall -= Time.deltaTime;
-                    Debug.Log(timeToFall);
+                   // Debug.Log(timeToFall);
                     if (timeToFall <= 0)
                     {
                         body.bodyType = RigidbodyType2D.Dynamic;
@@ -59,10 +59,10 @@ public class CrushingBlock : MonoBehaviour
                 break;
             case State.WAITING:
                 {
-                    Debug.Log("isWaiting");
+                    //Debug.Log("isWaiting");
 
                     timeToUp -= Time.deltaTime;
-                    Debug.Log(timeToUp);
+                    //Debug.Log(timeToUp);
                     if (timeToUp <= 0)
                     {
                         state = State.MOVING_UP;
@@ -72,7 +72,7 @@ public class CrushingBlock : MonoBehaviour
                 break;
             case State.MOVING_UP:
                 {
-                    Debug.Log("moving Up");
+                   // Debug.Log("moving Up");
                     body.velocity = (upPosition - transform.position).normalized * speed;
                     if (Vector3.Distance(transform.position, upPosition) < 0.05f)
                     {

@@ -8,7 +8,7 @@ public class cart : MonoBehaviour
    private Rigidbody2D body;
    private Vector2 direction;
    private bool isTriggered = false;
-    
+   [SerializeField] float speed;
    
     // Start is called before the first frame update
     void Start()
@@ -31,7 +31,7 @@ public class cart : MonoBehaviour
            if(body.velocity.magnitude <1)
             {
                 Debug.Log(body.velocity.y);
-                direction = new Vector2(2, body.velocity.y);
+                direction = new Vector2(speed, body.velocity.y);
                 body.velocity = direction;
             }
 
