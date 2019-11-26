@@ -6,6 +6,7 @@ TagManager:
   tags:
   - roundBoulder
   - cart
+  - cartStopper
   layers:
   - Default
   - TransparentFX
