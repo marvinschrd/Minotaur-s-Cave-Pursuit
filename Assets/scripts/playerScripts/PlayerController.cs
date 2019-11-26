@@ -24,9 +24,13 @@ public class PlayerController : MonoBehaviour
     bool canJump = false;
     int touchedWall = 0;
 
+    private Vector3 startPosition;
+    private Vector3 checkpointPosition;
+
     // Start is called before the first frame update
     void Start()
     {
+        startPosition = transform.position;
         body = GetComponent<Rigidbody2D>();
 
         if (body != null)
@@ -122,6 +126,17 @@ public class PlayerController : MonoBehaviour
             body.gravityScale = 1;
             timerStopJump = timeStopJump;
         }
+    }
+
+    public void checkpointReached(Vector2 NextCheckpointPosition)
+    {
+        checkpointPosition =  NextCheckpointPosition;
+        Debug.Log(NextCheckpointPosition);
+    }
+   public void Respawn()
+    {
+        transform.position = checkpointPosition;
+        
     }
 
     // Update is called once per frame

@@ -26,7 +26,7 @@ public class fallingPlatform : MonoBehaviour
         {
            
             timeToFall -= Time.deltaTime;
-            Debug.Log(timeToFall);
+            //Debug.Log(timeToFall);
             if (timeToFall <= 0)
             {
                 body.bodyType = RigidbodyType2D.Dynamic;
