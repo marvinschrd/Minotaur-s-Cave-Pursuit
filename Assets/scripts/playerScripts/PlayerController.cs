@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D body;
    [SerializeField] public Animator Animator;
     Vector2 direction;
-
+    float horizontalMove;
+    
     [SerializeField]
     private float speed = 2;
 
@@ -20,9 +21,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float jumpForce = 5;
     [SerializeField] float raycastJumpLength = 0.6f;
     [SerializeField] float timeStopJump = 0.1f;
-    float timerStopJump = 0f;
-    bool canJump = false;
-    int touchedWall = 0;
+   private float timerStopJump = 0f;
+   private bool canJump = false;
+   private  int touchedWall = 0;
+
+   private bool facingRight = true;
+   private bool facingLeft = false;
 
     private Vector3 startPosition;
     private Vector3 checkpointPosition;
@@ -32,6 +36,8 @@ public class PlayerController : MonoBehaviour
     {
         startPosition = transform.position;
         body = GetComponent<Rigidbody2D>();
+        
+        
 
         if (body != null)
         {
@@ -46,23 +52,10 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         body.velocity = direction;
+        
 
     }
 
-    //void Attack()
-    //{
-    //    if (Input.GetButtonDown("Fire1"))
-    //    {
-    //        Debug.Log("yes");
-    //        Animator.SetBool("isFighting", true);
-    //    }
-    //    if (Input.GetButtonUp("Fire1"))
-    //    {
-    //        Debug.Log("yes");
-    //        Animator.SetBool("isFighting", false);
-    //    }
-        
-    //}
 
     void JumpCheck()
     {
@@ -144,12 +137,27 @@ public class PlayerController : MonoBehaviour
     {
         direction = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
         Animator.SetFloat("speed",Mathf.Abs( Input.GetAxis("Horizontal")*speed));
+        horizontalMove = Input.GetAxis("Horizontal");
         if (body.velocity.y < -0.1f)
         {
             direction = new Vector2(body.velocity.x, body.velocity.y * 1.01f);
         }
         JumpCheck();
-        
+
+        if (horizontalMove < 0 && !facingLeft)
+        {
+            facingLeft = true;
+            facingRight = false;
+             Animator.transform.Rotate(0, 180, 0);
+        }
+
+        if (horizontalMove > 0 && !facingRight)
+        {
+            facingRight = true;
+            facingLeft = false;
+            Animator.transform.Rotate(0, 180, 0);
+        }
+
     }
 
 
