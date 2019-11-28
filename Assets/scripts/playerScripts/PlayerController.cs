@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
             else if (hitRight.rigidbody != null && touchedWall == 0 || hitRight.rigidbody != null && touchedWall == 2)
             {
 
-                body.gravityScale = 0.2f;
+                //body.gravityScale = 0.2f;
                 canJump = true;
                 touchedWall = 1;
                 Debug.Log(body.gravityScale);
@@ -83,7 +83,7 @@ public class PlayerController : MonoBehaviour
             else if (hitLeft.rigidbody != null && touchedWall == 0 || hitLeft.rigidbody != null && touchedWall == 1)
             {
 
-                body.gravityScale = 0.2f;
+                //body.gravityScale = 0.2f;
                 canJump = true;
                 touchedWall = 2;
 
@@ -157,7 +157,8 @@ public class PlayerController : MonoBehaviour
             facingLeft = false;
             Animator.transform.Rotate(0, 180, 0);
         }
-
+        Animator.SetFloat("damage", -1);
+        
     }
 
 
@@ -170,17 +171,5 @@ public class PlayerController : MonoBehaviour
 
 
     }
-    //void OnTriggerStay2D(Collider2D other)
-    //{
-
-    //    Debug.Log("Enter");
-    //    canJump = true;
-    //}
-
-    //void OnTriggerExit(Collider2D other)
-    //{
-
-    //    Debug.Log("Leave");
-    //    canJump = false;
-    //}
+   
 }

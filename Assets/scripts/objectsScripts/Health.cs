@@ -6,10 +6,9 @@ public class Health : MonoBehaviour
 {
     [SerializeField]
     float maxHealth;
-
     float currentHealth;
-
-
+    bool isDead = false;
+    [SerializeField] Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +18,7 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void TakeDamage(int dmg)
@@ -30,7 +29,14 @@ public class Health : MonoBehaviour
 
         if (currentHealth <= 0)
         {
+            isDead = true;
+            if (anim != null&& isDead)
+            {
+                anim.SetBool("destruct", true);
+            }
             Destroy(gameObject);
         }
     }
+
+   
 }

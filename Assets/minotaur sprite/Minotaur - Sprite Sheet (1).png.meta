@@ -1607,10 +1607,10 @@ TextureImporter:
       name: hurt1
       rect:
         serializedVersion: 2
-        x: 28
-        y: 1088
-        width: 52
-        height: 41
+        x: 29
+        y: 1061
+        width: 55
+        height: 75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1628,10 +1628,10 @@ TextureImporter:
       name: hurt2
       rect:
         serializedVersion: 2
-        x: 124
-        y: 1088
-        width: 52
-        height: 40
+        x: 126
+        y: 1062
+        width: 59
+        height: 75
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1649,10 +1649,10 @@ TextureImporter:
       name: hurt3
       rect:
         serializedVersion: 2
-        x: 221
-        y: 1088
-        width: 52
-        height: 41
+        x: 223
+        y: 1063
+        width: 51
+        height: 73
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

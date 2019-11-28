@@ -8,13 +8,13 @@ public class AttackTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.GetComponent<BoxCollider2D>() != null)
-        {
+       
+            Debug.Log(collision.gameObject);
             if (collision.gameObject.GetComponent<Health>() != null)
             {
                 Health Health = collision.gameObject.GetComponent<Health>();
                 Health.TakeDamage(damage);
             }
-        }
+        
     }
 }

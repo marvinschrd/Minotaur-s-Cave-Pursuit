@@ -23,6 +23,7 @@ public class rock : MonoBehaviour
         {
             PlayerHealth playerHealth = other.gameObject.GetComponent<PlayerHealth>();
             playerHealth.TakeDamage(damage);
+            Destroy(gameObject);
         }
 
     }

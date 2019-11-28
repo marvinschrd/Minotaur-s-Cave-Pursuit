@@ -72,9 +72,10 @@ public class CrushingBlock : MonoBehaviour
                 break;
             case State.MOVING_UP:
                 {
-                   // Debug.Log("moving Up");
+                    Debug.Log("moving Up");
+                   
                     body.velocity = (upPosition - transform.position).normalized * speed;
-                    if (Vector3.Distance(transform.position, upPosition) < 0.05f)
+                    if (Vector3.Distance(transform.position, upPosition) < 0.01f)
                     {
                         state = State.IDLE;
                     }

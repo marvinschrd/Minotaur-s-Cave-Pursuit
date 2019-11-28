@@ -24,7 +24,7 @@ public class PlayerAttack : MonoBehaviour
         
             if (Input.GetButtonDown("Fire1")&& !attacking)
             {
-                Debug.Log("yes");
+                //Debug.Log("yes");
             attacking = true;
               
             attackTimer = attackCoolDown;
@@ -39,6 +39,7 @@ public class PlayerAttack : MonoBehaviour
             //}
             if(attacking == true)
             {
+
                 if(attackTimer > 0)
                 {
                   attackTimer -= Time.deltaTime;
