@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class mushroom : MonoBehaviour
+public class escapingDwarf : MonoBehaviour
 {
-    [SerializeField]int heal = 10;
+
+    Rigidbody2D body;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        body = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -18,12 +20,10 @@ public class mushroom : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
-        if (collision.gameObject.tag == "Player")
+        if(collision.gameObject.tag == "Player")
         {
-            PlayerHealth player = collision.gameObject.GetComponent<PlayerHealth>();
-            player.TakeHealth(heal);
-            Destroy(gameObject);
+
         }
     }
+
 }

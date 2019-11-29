@@ -37,8 +37,8 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            
-            player.Respawn();   
+
+            animator.SetBool("isDead", true);  
             
         }
 

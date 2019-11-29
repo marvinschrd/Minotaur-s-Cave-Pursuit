@@ -128,6 +128,7 @@ public class PlayerController : MonoBehaviour
     }
    public void Respawn()
     {
+        Animator.SetBool("isDead", false);
         transform.position = checkpointPosition;
         
     }
