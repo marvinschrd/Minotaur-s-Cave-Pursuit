@@ -33,13 +33,14 @@ public class Health : MonoBehaviour
             //if (anim != null&& isDead)
             //{
             //}
-                anim.SetBool("destruct", true);
+            anim.SetBool("destruct", true);
             //Destroy(gameObject);
         }
     }
 
     public void Destroy()
     {
+        Debug.Log("destroy");
         Destroy(gameObject);
     }
 

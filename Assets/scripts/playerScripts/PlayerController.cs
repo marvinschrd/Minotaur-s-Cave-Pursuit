@@ -28,8 +28,12 @@ public class PlayerController : MonoBehaviour
    private bool facingRight = true;
    private bool facingLeft = false;
 
-    private Vector3 startPosition;
-    private Vector3 checkpointPosition;
+   private Vector3 startPosition;
+   private Vector3 checkpointPosition;
+
+    [SerializeField] float freezeTime;
+    float freezeTimer;
+    bool freezed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -134,9 +138,28 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        direction = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
-        Animator.SetFloat("speed",Mathf.Abs( Input.GetAxis("Horizontal")*speed));
-        horizontalMove = Input.GetAxis("Horizontal");
+        if (freezed)
+        {
+            freezeTimer -= Time.deltaTime;
+            Animator.SetFloat("speed",0);
+            if (freezeTimer <= 0)
+            {
+                Animator.SetBool("freezed", false);
+                body.bodyType = RigidbodyType2D.Dynamic;
+                freezed = false;
+            }
+        }
+
+        
+         direction = new Vector2(Input.GetAxis("Horizontal") * speed, body.velocity.y);
+        if (!freezed)
+        {
+            Animator.SetFloat("speed", Mathf.Abs(Input.GetAxis("Horizontal") * speed));
+        }
+         horizontalMove = Input.GetAxis("Horizontal");
+        
+       
+
         if (body.velocity.y < -0.1f)
         {
             direction = new Vector2(body.velocity.x, body.velocity.y * 1.01f);
@@ -158,8 +181,16 @@ public class PlayerController : MonoBehaviour
         }
         Animator.SetFloat("damage", -1);
         
+       
+
     }
 
+    public void freeze()
+    {
+        freezeTimer = freezeTime;
+        body.bodyType = RigidbodyType2D.Static;
+        freezed = true;
+    }
 
     void OnDrawGizmos()
     {

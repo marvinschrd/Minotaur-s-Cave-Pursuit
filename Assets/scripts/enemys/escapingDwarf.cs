@@ -68,6 +68,8 @@ public class escapingDwarf : MonoBehaviour
             animator.SetBool("playerOnSight", true);
             //animator.transform.Rotate(0, 180, 0);
             state = State.SURPRISED;
+            PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
+            playerController.freeze();
         }
     }
 

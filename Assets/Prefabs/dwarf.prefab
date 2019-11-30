@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 615763610}
   m_Layer: 0
   m_Name: dwarf
-  m_TagString: Untagged
+  m_TagString: dwarf
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,6 +179,6 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.079452515, y: 0}
+  m_Offset: {x: -1.4228547, y: -0.083737046}
   serializedVersion: 2
-  m_Radius: 1.5740814
+  m_Radius: 1.61301

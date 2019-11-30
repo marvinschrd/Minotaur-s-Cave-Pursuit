@@ -8,6 +8,7 @@ TagManager:
   - cart
   - cartStopper
   - mushroom
+  - dwarf
   layers:
   - Default
   - TransparentFX
@@ -59,6 +60,9 @@ TagManager:
     locked: 0
   - name: rails
     uniqueID: 1300913669
+    locked: 0
+  - name: dwarf
+    uniqueID: 1072186493
     locked: 0
   - name: player
     uniqueID: 2360635111
