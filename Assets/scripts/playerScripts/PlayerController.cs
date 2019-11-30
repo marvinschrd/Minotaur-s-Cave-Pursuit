@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
     float freezeTimer;
     bool freezed = false;
 
+    bool key = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -192,6 +194,18 @@ public class PlayerController : MonoBehaviour
         freezed = true;
     }
 
+    public void TakeKey()
+    {
+        key = true;
+    }
+
+   public bool Usekey()
+    {
+        bool usingKey = key;
+        key = false;
+        return usingKey;
+        
+    }
     void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
