@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour
             //}
         }
 
-        if (Input.GetAxis("Jump") > 0.1f && canJump)
+        if (Input.GetAxis("UpArrow") > 0.1f && canJump)
         {
             Debug.Log("Jump");
             direction = new Vector2(body.velocity.x, jumpForce);

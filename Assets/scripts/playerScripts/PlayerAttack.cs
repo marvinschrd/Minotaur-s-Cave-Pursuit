@@ -22,7 +22,7 @@ public class PlayerAttack : MonoBehaviour
     void Update()
     {
         
-            if (Input.GetButtonDown("Fire1")&& !attacking)
+            if (Input.GetButtonDown("attack")&& !attacking)
             {
                 //Debug.Log("yes");
             attacking = true;
