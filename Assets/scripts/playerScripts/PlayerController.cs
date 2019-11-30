@@ -52,8 +52,6 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         body.velocity = direction;
-        
-
     }
 
 

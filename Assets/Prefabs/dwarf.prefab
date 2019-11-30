@@ -11,8 +11,10 @@ GameObject:
   - component: {fileID: 994385371543932169}
   - component: {fileID: 994385371543932168}
   - component: {fileID: 994385371543932171}
+  - component: {fileID: 624447589087749531}
   - component: {fileID: 919187691288849748}
   - component: {fileID: 8887450751732192678}
+  - component: {fileID: 615763610}
   m_Layer: 0
   m_Name: dwarf
   m_TagString: Untagged
@@ -29,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 994385371543932170}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.1564583, y: -1.735969, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.02, y: 1.02, z: 1.02}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -69,13 +71,13 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1072186493
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 8631894763534515125, guid: 2c797160de6e7e040a3b13999c9fa761,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.5, y: 0.39583334}
@@ -103,6 +105,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &624447589087749531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994385371543932170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78bc942ec32bf76458c2672827d74721, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 994385371543932171}
+  speed: 1.5
 --- !u!50 &919187691288849748
 Rigidbody2D:
   serializedVersion: 4
@@ -123,7 +139,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &8887450751732192678
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -150,3 +166,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.39593816, y: 0.39583334}
   m_EdgeRadius: 0
+--- !u!58 &615763610
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994385371543932170}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.079452515, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.5740814
