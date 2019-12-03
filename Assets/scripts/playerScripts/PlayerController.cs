@@ -134,7 +134,6 @@ public class PlayerController : MonoBehaviour
     {
         Animator.SetBool("isDead", false);
         transform.position = checkpointPosition;
-        
     }
 
     // Update is called once per frame

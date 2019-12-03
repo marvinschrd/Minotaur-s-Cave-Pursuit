@@ -7,6 +7,7 @@ public class PlayerHealth : MonoBehaviour
     PlayerController player;
     [SerializeField]
     float maxHealth;
+    [SerializeField] int lives;
     [SerializeField] Animator animator;
     float currentHealth;
     float hurtTimer = 1f;
@@ -37,9 +38,9 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-
-            animator.SetBool("isDead", true);  
-            
+            lives--;
+            animator.SetBool("isDead", true);
+            currentHealth = maxHealth;
         }
 
     }

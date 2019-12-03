@@ -10,7 +10,7 @@ public class bat : MonoBehaviour
    [SerializeField] private Animator animator;
    [SerializeField] private int damage = 10;
    [SerializeField] float speed;
-
+    bool isDetected = false;
    private Rigidbody2D body;
 
     enum State
@@ -63,14 +63,19 @@ public class bat : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    public void playerDetected(Vector3 targetFromDetector)
     {
-        if (other.GetComponent<PlayerController>())
-        {
-            target = other.transform.position;
-            state = State.CHASE_PLAYER;
-        }
+        state = State.CHASE_PLAYER;
+        target = targetFromDetector;
     }
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (other.GetComponent<PlayerController>())
+    //    {
+    //        target = other.transform.position;
+    //        state = State.CHASE_PLAYER;
+    //    }
+    //}
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<PlayerHealth>() != null)
