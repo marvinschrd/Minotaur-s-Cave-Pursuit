@@ -6,6 +6,7 @@ public class doorCenter : MonoBehaviour
 {
     bool key = false;
     SpriteRenderer spriteRenderer;
+     [SerializeField]AudioClip openingdoor;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +23,7 @@ public class doorCenter : MonoBehaviour
     {
         if(key)
         {
+           
             Destroy(gameObject);
         }
     }
