@@ -31,7 +31,7 @@ public class cannon : MonoBehaviour
             fireTimer = fireDuration;
         GameObject cannonBall = Instantiate(prefabCannonball, cannonBallSpawnPoint);
             Debug.Log(cannonBall.transform.position);
-        cannonBall.gameObject.transform.localScale += new Vector3(0.2f, 0.2f, 0);
+        cannonBall.gameObject.transform.localScale += new Vector3(0.1f, 0.1f, 0);
         cannonBall.GetComponent<Rigidbody2D>().velocity = Vector2.left * 10;
         coolDownOn = true;
         }

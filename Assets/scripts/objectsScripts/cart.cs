@@ -54,7 +54,8 @@ public class cart : MonoBehaviour
             case State.MOVING:
                 if (body.velocity.magnitude < 1)
                 {
-                    // Debug.Log(body.velocity.y);
+                    Debug.Log("moving");
+                     Debug.Log(body.velocity.y);
                     direction = new Vector2(speed, body.velocity.y);
                     body.velocity = direction;
                 }
@@ -81,6 +82,7 @@ public class cart : MonoBehaviour
         { 
         isTriggered = true;
         state = State.MOVING;
+            
             }
     }
 
