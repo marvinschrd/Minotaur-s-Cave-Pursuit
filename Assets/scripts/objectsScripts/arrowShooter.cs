@@ -7,6 +7,8 @@ public class arrowShooter : MonoBehaviour
 
     [SerializeField] GameObject prefabArrow;
     [SerializeField] Transform arrowSpawnPoint;
+    [SerializeField] AudioSource arrowSound;
+    [SerializeField] float arrowSpeed = 10;
     private bool canShoot = false;
     // Start is called before the first frame update
     void Start()
@@ -24,12 +26,12 @@ public class arrowShooter : MonoBehaviour
     {
         if (canShoot)
         {
-            for (int i = 0; i <= 3; i++)
+            for (int i = 0; i <= 1; i++)
             {
-
+                arrowSound.Play();
                 GameObject arrow = Instantiate(prefabArrow, arrowSpawnPoint);
                 // arrow.gameObject.transform.localScale += new Vector3(1f, 1f, 0);
-                arrow.GetComponent<Rigidbody2D>().velocity = Vector2.down * 10;
+                arrow.GetComponent<Rigidbody2D>().velocity = Vector2.down * arrowSpeed;
                 Debug.Log(arrow.transform);
             }
 

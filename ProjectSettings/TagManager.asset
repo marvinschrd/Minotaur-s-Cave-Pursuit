@@ -9,6 +9,7 @@ TagManager:
   - cartStopper
   - mushroom
   - dwarf
+  - woodPlatform
   layers:
   - Default
   - TransparentFX

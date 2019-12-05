@@ -6,25 +6,29 @@ public class doorCenter : MonoBehaviour
 {
     bool key = false;
     SpriteRenderer spriteRenderer;
-     [SerializeField]AudioClip openingdoor;
+    Collider2D collider;
+    [SerializeField] AudioSource openingDoor;
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        collider = gameObject.GetComponent<Collider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        openDoor();
+        //openDoor();
     }
 
     void openDoor()
     {
         if(key)
         {
-           
-            Destroy(gameObject);
+            openingDoor.Play();
+            spriteRenderer.enabled = false;
+            collider.enabled = false;
+            //Destroy(gameObject);
         }
     }
 
@@ -34,6 +38,7 @@ public class doorCenter : MonoBehaviour
         {
             PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
             key = playerController.Usekey();
+            openDoor();
             Debug.Log("key" + key);
         }
     }

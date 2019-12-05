@@ -37,15 +37,15 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] AudioSource footSteps;
     [SerializeField] AudioSource jump;
+    bool canPlayFootSteps = true;
     bool key = false;
 
+    
     // Start is called before the first frame update
     void Start()
     {
         startPosition = transform.position;
         body = GetComponent<Rigidbody2D>();
-        
-        
 
         if (body != null)
         {
@@ -63,6 +63,7 @@ public class PlayerController : MonoBehaviour
     }
 
 
+        
     void JumpCheck()
     {
         timerStopJump -= Time.deltaTime;
@@ -70,6 +71,7 @@ public class PlayerController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, raycastJumpLength, 1 << LayerMask.NameToLayer("platform"));
         RaycastHit2D hitRight = Physics2D.Raycast(transform.position, Vector2.right, raycastJumpLength, 1 << LayerMask.NameToLayer("wall"));
         RaycastHit2D hitLeft = Physics2D.Raycast(transform.position, Vector2.left, raycastJumpLength, 1 << LayerMask.NameToLayer("wall"));
+
 
         if (timerStopJump <= 0)
         {
@@ -124,6 +126,7 @@ public class PlayerController : MonoBehaviour
 
             canJump = false;
             body.gravityScale = 1;
+            footSteps.volume = 0;
             timerStopJump = timeStopJump;
         }
     }
@@ -185,23 +188,8 @@ public class PlayerController : MonoBehaviour
             facingLeft = false;
             Animator.transform.Rotate(0, 180, 0);
         }
-        //if (horizontalMove == 0)
-        //{
-        //    footSteps.Stop();
-        //}
-        //if(horizontalMove <0&& facingLeft)
-        //{
-        //  footSteps.Play();
-        //}
-        //if(horizontalMove >0&& facingRight)
-        //{
-        //    footSteps.Play();
-        //}
-        //Animator.SetFloat("damage", -1);
-        //while(horizontalMove!=0)
-        //{
-        //    footSteps.Play();
-        //}
+
+        walkingSound();
        
 
     }
@@ -224,6 +212,29 @@ public class PlayerController : MonoBehaviour
         key = false;
         return usingKey;
         
+    }
+
+    private void walkingSound()
+    {
+        if (canJump)
+        {
+            footSteps.volume = 1;
+            if (horizontalMove > 0 && canPlayFootSteps)
+            {
+                footSteps.Play();
+                canPlayFootSteps = false;
+            }
+            if (horizontalMove < 0 && canPlayFootSteps)
+            {
+                footSteps.Play();
+                canPlayFootSteps = false;
+            }
+            if (horizontalMove == 0)
+            {
+                footSteps.Stop();
+                canPlayFootSteps = true;
+            }
+        }
     }
     void OnDrawGizmos()
     {
