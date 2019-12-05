@@ -9,6 +9,8 @@ public class Health : MonoBehaviour
     float currentHealth;
     bool isDead = false;
     [SerializeField] Animator anim;
+    [SerializeField] ParticleSystem Particle;
+    [SerializeField] AudioSource hit;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +25,10 @@ public class Health : MonoBehaviour
 
     public void TakeDamage(int dmg)
     {
+        if (hit != null)
+        {
+            hit.Play();
+        }
         currentHealth -= dmg;
 
         Debug.Log("Current health = " + currentHealth);
@@ -33,6 +39,10 @@ public class Health : MonoBehaviour
             //if (anim != null&& isDead)
             //{
             //}
+            if (Particle != null)
+            {
+                Particle.Play();
+            }
             anim.SetBool("destruct", true);
             //Destroy(gameObject);
         }

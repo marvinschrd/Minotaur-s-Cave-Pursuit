@@ -8,7 +8,7 @@ public class PlayerAttack : MonoBehaviour
     private float attackTimer = 0f;
     private float attackCoolDown = 0.3f;
     private float attackDamage = 0f;
-
+    [SerializeField] AudioSource attackSwing;
     public Collider2D attackTrigger;
 
     [SerializeField] public Animator Animator;
@@ -24,14 +24,16 @@ public class PlayerAttack : MonoBehaviour
         
             if (Input.GetButtonDown("attack")&& !attacking)
             {
-                //Debug.Log("yes");
+            attackSwing.Play();
+            //Debug.Log("yes");
             attacking = true;
               
             attackTimer = attackCoolDown;
 
             attackTrigger.enabled = true;
+           
 
-            }
+        }
             //if (Input.GetButtonUp("Fire1"))
             //{
             //    Debug.Log("yes");
@@ -39,8 +41,8 @@ public class PlayerAttack : MonoBehaviour
             //}
             if(attacking == true)
             {
-
-                if(attackTimer > 0)
+            
+            if (attackTimer > 0)
                 {
                   attackTimer -= Time.deltaTime;
                 }
@@ -50,7 +52,9 @@ public class PlayerAttack : MonoBehaviour
                 attackTrigger.enabled = false;
                 }
             }
+       
         Animator.SetBool("isFighting", attacking);
+        
     }
     }
 

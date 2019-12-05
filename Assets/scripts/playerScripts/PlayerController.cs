@@ -35,6 +35,8 @@ public class PlayerController : MonoBehaviour
     float freezeTimer;
     bool freezed = false;
 
+    [SerializeField] AudioSource footSteps;
+    [SerializeField] AudioSource jump;
     bool key = false;
 
     // Start is called before the first frame update
@@ -103,6 +105,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetAxis("UpArrow") > 0.1f && canJump)
         {
+            jump.Play();
             Debug.Log("Jump");
             direction = new Vector2(body.velocity.x, jumpForce);
 
@@ -169,6 +172,7 @@ public class PlayerController : MonoBehaviour
 
         if (horizontalMove < 0 && !facingLeft)
         {
+            //footSteps.Play();
             facingLeft = true;
             facingRight = false;
              Animator.transform.Rotate(0, 180, 0);
@@ -176,12 +180,28 @@ public class PlayerController : MonoBehaviour
 
         if (horizontalMove > 0 && !facingRight)
         {
+           // footSteps.Play();
             facingRight = true;
             facingLeft = false;
             Animator.transform.Rotate(0, 180, 0);
         }
-        Animator.SetFloat("damage", -1);
-        
+        //if (horizontalMove == 0)
+        //{
+        //    footSteps.Stop();
+        //}
+        //if(horizontalMove <0&& facingLeft)
+        //{
+        //  footSteps.Play();
+        //}
+        //if(horizontalMove >0&& facingRight)
+        //{
+        //    footSteps.Play();
+        //}
+        //Animator.SetFloat("damage", -1);
+        //while(horizontalMove!=0)
+        //{
+        //    footSteps.Play();
+        //}
        
 
     }

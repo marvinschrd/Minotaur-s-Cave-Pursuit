@@ -7,6 +7,7 @@ public class escapingDwarf : MonoBehaviour
 
     Rigidbody2D body;
    [SerializeField] Animator animator;
+    [SerializeField] AudioSource cry;
     Vector2 direction;
    [SerializeField] float speed;
     bool run = false;
@@ -65,6 +66,7 @@ public class escapingDwarf : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            cry.Play();
             animator.SetBool("playerOnSight", true);
             //animator.transform.Rotate(0, 180, 0);
             state = State.SURPRISED;

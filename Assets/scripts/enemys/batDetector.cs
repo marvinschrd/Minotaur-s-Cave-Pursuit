@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class batDetector : MonoBehaviour
 {
+    [SerializeField] AudioSource squeak;
     bat batScript;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class batDetector : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             batScript.playerDetected(collision.transform.position);
+            squeak.Play();
         }
     }
 

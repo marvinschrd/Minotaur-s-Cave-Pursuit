@@ -9,6 +9,8 @@ public class PlayerHealth : MonoBehaviour
     float maxHealth;
     [SerializeField] int lives;
     [SerializeField] Animator animator;
+    [SerializeField] AudioSource growl;
+    [SerializeField] AudioSource takeHealth;
     float currentHealth;
     float hurtTimer = 1f;
     float hurtTime = 0.5f;
@@ -31,7 +33,7 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         currentHealth -= dmg;
-       
+        growl.Play();
         animator.SetBool("isHurt",true);
         Debug.Log("Current health = " + currentHealth);
         hurtTimer = hurtTime;
@@ -54,6 +56,7 @@ public class PlayerHealth : MonoBehaviour
     }
     public void TakeHealth(int health)
     {
+        takeHealth.Play();
         currentHealth += health;
         if(currentHealth >= maxHealth)
         {

@@ -12,7 +12,7 @@ public class cart : MonoBehaviour
     private Vector2 startingPosition;
     [SerializeField] float timerToSpawnBack;
     private float timeToSpawnBack;
-
+    [SerializeField] AudioSource cartRolling;
     // Start is called before the first frame update
     void Start()
     {
@@ -79,11 +79,13 @@ public class cart : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
-        { 
-        isTriggered = true;
+        {
+            cartRolling.Play();
+            isTriggered = true;
         state = State.MOVING;
             
             }
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -97,6 +99,7 @@ public class cart : MonoBehaviour
         //Debug.Log(collision.gameObject.tag);
         if(collision.gameObject.tag == "cartStopper" && !isTriggered)
         {
+            cartRolling.Stop();
             //Debug.Log("WAITING");
             state = State.WAITING;
         }

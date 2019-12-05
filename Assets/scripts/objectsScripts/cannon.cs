@@ -12,6 +12,8 @@ public class cannon : MonoBehaviour
     private float fireCoolDown = 2.0f;
     private bool canShoot = false;
     private bool coolDownOn = false;
+    [SerializeField] ParticleSystem cannonParticle;
+    [SerializeField] AudioSource cannonSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,9 @@ public class cannon : MonoBehaviour
        if(canShoot == true && coolDownOn == false)
         {
             fireTimer = fireDuration;
+            cannonSound.Play();
         GameObject cannonBall = Instantiate(prefabCannonball, cannonBallSpawnPoint);
+            cannonParticle.Play();
             Debug.Log(cannonBall.transform.position);
         cannonBall.gameObject.transform.localScale += new Vector3(0.1f, 0.1f, 0);
         cannonBall.GetComponent<Rigidbody2D>().velocity = Vector2.left * 10;
