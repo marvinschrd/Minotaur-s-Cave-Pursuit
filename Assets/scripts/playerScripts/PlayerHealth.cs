@@ -1,29 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
     PlayerController player;
     [SerializeField]
     float maxHealth;
-    [SerializeField] int lives;
+    [SerializeField] int lives = 3;
     [SerializeField] Animator animator;
     [SerializeField] AudioSource growl;
     [SerializeField] AudioSource takeHealth;
+    [SerializeField] healthDisplay healtBar;
+    [SerializeField] lives life;
     float currentHealth;
     float hurtTimer = 1f;
     float hurtTime = 0.5f;
     bool startTimer = false;
     bool hurted = false;
-    
+
 
     // Start is called before the first frame update
     void Start()
     {
-       currentHealth = maxHealth;
-       PlayerController playerController = transform.gameObject.GetComponent<PlayerController>();
-       player = playerController;
+        currentHealth = maxHealth;
+        PlayerController playerController = transform.gameObject.GetComponent<PlayerController>();
+        player = playerController;
         animator.SetBool("isHurt", false);
         hurtTimer = 0f;
     }
@@ -33,18 +36,25 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage(int dmg)
     {
         currentHealth -= dmg;
+        healtBar.setHealth(currentHealth, maxHealth);
         growl.Play();
-        animator.SetBool("isHurt",true);
+        animator.SetBool("isHurt", true);
         Debug.Log("Current health = " + currentHealth);
         hurtTimer = hurtTime;
 
         if (currentHealth <= 0)
         {
-            lives--;
+            lives-= 1;
+            life.updateLives(lives);
             animator.SetBool("isDead", true);
-            currentHealth = maxHealth;
         }
 
+    }
+
+    public void resetHealth()
+    {
+        currentHealth = maxHealth;
+        healtBar.setHealth(currentHealth, maxHealth);
     }
     void Update()
     {
@@ -58,9 +68,13 @@ public class PlayerHealth : MonoBehaviour
     {
         takeHealth.Play();
         currentHealth += health;
-        if(currentHealth >= maxHealth)
+        healtBar.setHealth(currentHealth, maxHealth);
+        if (currentHealth >= maxHealth)
         {
             currentHealth = maxHealth;
         }
     }
+
+   
+
 }

@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody2D body;
    [SerializeField] public Animator Animator;
+    PlayerHealth playerHealth;
     Vector2 direction;
     float horizontalMove;
     
@@ -37,6 +38,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] AudioSource footSteps;
     [SerializeField] AudioSource jump;
+    [SerializeField] AudioSource keySound;
     bool canPlayFootSteps = true;
     bool key = false;
 
@@ -46,15 +48,7 @@ public class PlayerController : MonoBehaviour
     {
         startPosition = transform.position;
         body = GetComponent<Rigidbody2D>();
-
-        if (body != null)
-        {
-            Debug.Log("Player's body founded!");
-        }
-        else
-        {
-            Debug.Log("No player body");
-        }
+        playerHealth = GetComponent<PlayerHealth>();
     }
 
     void FixedUpdate()
@@ -140,6 +134,7 @@ public class PlayerController : MonoBehaviour
     {
         Animator.SetBool("isDead", false);
         transform.position = checkpointPosition;
+        playerHealth.resetHealth();
     }
 
     // Update is called once per frame
@@ -203,6 +198,7 @@ public class PlayerController : MonoBehaviour
 
     public void TakeKey()
     {
+        keySound.Play();
         key = true;
     }
 

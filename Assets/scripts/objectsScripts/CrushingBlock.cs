@@ -11,9 +11,10 @@ public class CrushingBlock : MonoBehaviour
     private float timeToUp;
 
     private Rigidbody2D body;
-    private bool isTriggered = false;
+    private bool hitGround = false;
     private Vector3 upPosition;
     [SerializeField] float speed;
+    [SerializeField] AudioSource hittingGround;
     private void Start()
     {
         body = transform.GetComponent<Rigidbody2D>();
@@ -39,7 +40,7 @@ public class CrushingBlock : MonoBehaviour
               //  Debug.Log("IDLE");
                 timeToFall = timerToFall;
                 timeToUp = TimerToUp;
-                isTriggered = false;
+                hitGround = false;
                 body.bodyType = RigidbodyType2D.Static;
                 break;
             case State.FALLING:
@@ -51,8 +52,9 @@ public class CrushingBlock : MonoBehaviour
                     {
                         body.bodyType = RigidbodyType2D.Dynamic;
                     }
-                    if (isTriggered)
+                    if (hitGround)
                     {
+                        hittingGround.Play();
                         state = State.WAITING;
                     }
                 }
@@ -86,7 +88,10 @@ public class CrushingBlock : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        state = State.FALLING;
+        if (collision.gameObject.tag == "Player")
+        {
+            state = State.FALLING;
+        }
     }
 
     //private void OnTriggerEnter2D(Collider2D collision)
@@ -113,6 +118,6 @@ public class CrushingBlock : MonoBehaviour
             PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
             playerHealth.TakeDamage(damage);
         }
-        isTriggered = true;
+        hitGround = true;
     }
 }
