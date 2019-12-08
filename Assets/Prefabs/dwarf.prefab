@@ -1,5 +1,66 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &38209016
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 38209017}
+  - component: {fileID: 38209018}
+  - component: {fileID: 38209019}
+  m_Layer: 0
+  m_Name: dwarfTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &38209017
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38209016}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 994385371543932169}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &38209018
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38209016}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.8258658, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.3258659
+--- !u!114 &38209019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38209016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131ff4fde31ac744d904e8ded6f1b915, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dwarf: {fileID: 624447589087749531}
 --- !u!1 &994385371543932170
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,7 +76,6 @@ GameObject:
   - component: {fileID: 3644267184318453095}
   - component: {fileID: 919187691288849748}
   - component: {fileID: 8887450751732192678}
-  - component: {fileID: 615763610}
   - component: {fileID: 774635516730618000}
   m_Layer: 0
   m_Name: dwarf
@@ -34,7 +94,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.1564583, y: -1.735969, z: 0}
   m_LocalScale: {x: 1.02, y: 1.02, z: 1.02}
-  m_Children: []
+  m_Children:
+  - {fileID: 38209017}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -137,6 +198,7 @@ MonoBehaviour:
   maxHealth: 0
   anim: {fileID: 994385371543932171}
   Particle: {fileID: 0}
+  hit: {fileID: 0}
 --- !u!50 &919187691288849748
 Rigidbody2D:
   serializedVersion: 4
@@ -184,22 +246,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.39593816, y: 0.39583334}
   m_EdgeRadius: 0
---- !u!58 &615763610
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 994385371543932170}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.51143026, y: -0.083737046}
-  serializedVersion: 2
-  m_Radius: 1.5626459
 --- !u!82 &774635516730618000
 AudioSource:
   m_ObjectHideFlags: 0

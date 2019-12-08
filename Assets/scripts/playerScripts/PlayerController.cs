@@ -41,6 +41,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] AudioSource keySound;
     bool canPlayFootSteps = true;
     bool key = false;
+    [SerializeField] GameObject keyUI;
 
     
     // Start is called before the first frame update
@@ -80,7 +81,6 @@ public class PlayerController : MonoBehaviour
                 //body.gravityScale = 0.2f;
                 canJump = true;
                 touchedWall = 1;
-                Debug.Log(body.gravityScale);
             }
             else if (hitLeft.rigidbody != null && touchedWall == 0 || hitLeft.rigidbody != null && touchedWall == 1)
             {
@@ -134,6 +134,7 @@ public class PlayerController : MonoBehaviour
     {
         Animator.SetBool("isDead", false);
         transform.position = checkpointPosition;
+        playerHealth.loseLife();
         playerHealth.resetHealth();
     }
 
@@ -200,6 +201,7 @@ public class PlayerController : MonoBehaviour
     {
         keySound.Play();
         key = true;
+        keyUI.SetActive(true);
     }
 
    public bool Usekey()
@@ -214,7 +216,7 @@ public class PlayerController : MonoBehaviour
     {
         if (canJump)
         {
-            footSteps.volume = 1;
+            footSteps.volume = 0.5f;
             if (horizontalMove > 0 && canPlayFootSteps)
             {
                 footSteps.Play();

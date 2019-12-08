@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class healthDisplay : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] PlayerHealth playerHealth;
     void Start()
     {
         
@@ -21,6 +20,12 @@ public class healthDisplay : MonoBehaviour
    public void setHealth(float currentHealth,float maxHealth)
     {
         currentHealth = currentHealth / maxHealth;
-        gameObject.transform.localScale = new Vector3(currentHealth, 1f);
+        Debug.Log("health =" +currentHealth);
+       transform.localScale = new Vector2(currentHealth, 1f);
+        if(currentHealth <= 0)
+        {
+            transform.localScale = new Vector2(0, 1f);
+        }
+        //transform.localScale = 
     }
 }

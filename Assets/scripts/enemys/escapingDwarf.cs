@@ -11,10 +11,12 @@ public class escapingDwarf : MonoBehaviour
     Vector2 direction;
    [SerializeField] float speed;
     bool run = false;
+    PlayerController player;
     // Start is called before the first frame update
     void Start()
     {
         body = gameObject.GetComponent<Rigidbody2D>();
+        player = FindObjectOfType<PlayerController>();
     }
 
     // Update is called once per frame
@@ -62,18 +64,29 @@ public class escapingDwarf : MonoBehaviour
     {
         body.velocity = direction;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if(collision.gameObject.tag == "Player")
+    //    {
+    //        cry.Play();
+    //        animator.SetBool("playerOnSight", true);
+    //        //animator.transform.Rotate(0, 180, 0);
+    //        state = State.SURPRISED;
+    //        PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
+    //        playerController.freeze();
+    //    }
+    //}
+
+    public void playerDetected()
     {
-        if(collision.gameObject.tag == "Player")
-        {
-            cry.Play();
-            animator.SetBool("playerOnSight", true);
-            //animator.transform.Rotate(0, 180, 0);
-            state = State.SURPRISED;
-            PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
-            playerController.freeze();
-        }
+        Debug.Log("detected");
+        cry.Play();
+        animator.SetBool("playerOnSight", true);
+        //animator.transform.Rotate(0, 180, 0);
+        state = State.SURPRISED;
+        player.freeze();
     }
+
 
     void startRunning()
     {

@@ -44,8 +44,6 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            lives-= 1;
-            life.updateLives(lives);
             animator.SetBool("isDead", true);
         }
 
@@ -74,7 +72,10 @@ public class PlayerHealth : MonoBehaviour
             currentHealth = maxHealth;
         }
     }
-
-   
+public void loseLife()
+    {
+        lives--;
+        life.updateLives(lives);
+    }
 
 }
