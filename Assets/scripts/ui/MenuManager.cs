@@ -13,9 +13,4 @@ public class MenuManager : MonoBehaviour
     {
         Application.Quit();
     }
-
-    public void PauseGame()
-    {
-
-    }
 }

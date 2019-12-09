@@ -19,9 +19,6 @@ public class PlayerHealth : MonoBehaviour
     float hurtTime = 0.5f;
     bool startTimer = false;
     bool hurted = false;
-
-
-    // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
@@ -30,9 +27,6 @@ public class PlayerHealth : MonoBehaviour
         animator.SetBool("isHurt", false);
         hurtTimer = 0f;
     }
-
-    // Update is called once per frame
-
     public void TakeDamage(int dmg)
     {
         currentHealth -= dmg;
@@ -41,12 +35,10 @@ public class PlayerHealth : MonoBehaviour
         animator.SetBool("isHurt", true);
         Debug.Log("Current health = " + currentHealth);
         hurtTimer = hurtTime;
-
         if (currentHealth <= 0)
         {
             animator.SetBool("isDead", true);
         }
-
     }
 
     public void resetHealth()
@@ -77,5 +69,4 @@ public void loseLife()
         lives--;
         life.updateLives(lives);
     }
-
 }

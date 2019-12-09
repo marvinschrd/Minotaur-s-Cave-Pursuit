@@ -6,8 +6,6 @@ public class fireBall : MonoBehaviour
 {
     [SerializeField] int damage = 20;
     [SerializeField] Animator anim;
-    // Start is called before the first frame update
-
     public void Destroy()
     {
         Destroy(gameObject);
@@ -21,6 +19,5 @@ public class fireBall : MonoBehaviour
             playerHealth.TakeDamage(damage);
         }
         anim.SetBool("explode", true);
-
     }
 }

@@ -9,13 +9,10 @@ public class fallingRock : MonoBehaviour
     [SerializeField] float timeToFall;
     float timerToFall;
     bool isTriggered = false;
-    // Start is called before the first frame update
     void Start()
     {
         body = gameObject.GetComponent<Rigidbody2D>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         if(isTriggered)
@@ -24,11 +21,9 @@ public class fallingRock : MonoBehaviour
             if(timerToFall <=0)
             {
                 body.bodyType = RigidbodyType2D.Dynamic;
-            }
-               
+            }  
         }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.GetComponent<PlayerHealth>() != null)
@@ -37,7 +32,6 @@ public class fallingRock : MonoBehaviour
             isTriggered = true;
         }
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<PlayerHealth>() != null)

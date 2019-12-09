@@ -9,19 +9,11 @@ public class arrowShooter : MonoBehaviour
     [SerializeField] Transform arrowSpawnPoint;
     [SerializeField] AudioSource arrowSound;
     [SerializeField] float arrowSpeed = 10;
-    private bool canShoot = false;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    bool canShoot = false;
     void Update()
     {
         shoot();
     }
-
     private void shoot()
     {
         if (canShoot)
@@ -30,11 +22,8 @@ public class arrowShooter : MonoBehaviour
             {
                 arrowSound.Play();
                 GameObject arrow = Instantiate(prefabArrow, arrowSpawnPoint);
-                // arrow.gameObject.transform.localScale += new Vector3(1f, 1f, 0);
                 arrow.GetComponent<Rigidbody2D>().velocity = Vector2.down * arrowSpeed;
-                Debug.Log(arrow.transform);
             }
-
             canShoot = false;
         }
     }
@@ -42,9 +31,7 @@ public class arrowShooter : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "cart")
         {
-            Debug.Log("canShoot");
             canShoot = true;
         }
     }
-
 }

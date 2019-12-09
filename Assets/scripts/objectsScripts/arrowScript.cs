@@ -4,11 +4,7 @@ using UnityEngine;
 
 public class arrowScript : MonoBehaviour
 {
-
     [SerializeField] int damage = 20;
-    // Start is called before the first frame update
-   
-
     void OnCollisionEnter2D(Collision2D other)
     {
         Debug.Log(other.gameObject);
@@ -18,6 +14,5 @@ public class arrowScript : MonoBehaviour
             playerHealth.TakeDamage(damage);
         }
             Destroy(gameObject);
-
     }
 }
