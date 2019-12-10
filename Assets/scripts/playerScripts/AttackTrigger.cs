@@ -7,9 +7,9 @@ public class AttackTrigger : MonoBehaviour
     [SerializeField] private int damage = 10;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.GetComponent<Health>() != null)
+        if (collision.gameObject.GetComponent<health>() != null)
         {
-            Health Health = collision.gameObject.GetComponent<Health>();
+            health Health = collision.gameObject.GetComponent<health>();
             Health.TakeDamage(damage);
         }
     }

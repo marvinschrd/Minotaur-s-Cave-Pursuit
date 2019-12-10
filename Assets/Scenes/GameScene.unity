@@ -1563,8 +1563,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: EXIT GAME
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3cde2d431ff3a704081038583fff754d, type: 2}
+  m_sharedMaterial: {fileID: -7465557498985130907, guid: 3cde2d431ff3a704081038583fff754d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3134,6 +3135,11 @@ PrefabInstance:
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8399747119134592750, guid: 2b0e7fb70a506f2438b0974ccaec0036,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1000
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b0e7fb70a506f2438b0974ccaec0036, type: 3}
 --- !u!1001 &124840857
@@ -3746,6 +3752,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_GravityScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8399747119134592750, guid: 2b0e7fb70a506f2438b0974ccaec0036,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 8399747119134592749, guid: 2b0e7fb70a506f2438b0974ccaec0036,
         type: 3}
@@ -14782,12 +14793,12 @@ PrefabInstance:
     - target: {fileID: 5428727816515666826, guid: 347ef9cac3c6cb54bb78b18569242cdf,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.98
+      value: -5.1
       objectReference: {fileID: 0}
     - target: {fileID: 5428727816515666826, guid: 347ef9cac3c6cb54bb78b18569242cdf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.56
+      value: 1.42
       objectReference: {fileID: 0}
     - target: {fileID: 5428727816515666826, guid: 347ef9cac3c6cb54bb78b18569242cdf,
         type: 3}
@@ -18049,8 +18060,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -290339463
-  m_SortingLayer: 4
+  m_SortingLayerID: -2044974771
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -1585888288855075318, guid: 9ab093a5105707344b5bcfe93bb44851,
     type: 3}
@@ -32221,7 +32232,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 1900, y: 1080}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -34665,8 +34676,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: RESUME
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3cde2d431ff3a704081038583fff754d, type: 2}
+  m_sharedMaterial: {fileID: -7465557498985130907, guid: 3cde2d431ff3a704081038583fff754d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -36267,7 +36279,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1552810568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.98, y: 2.1074, z: -11.4}
+  m_LocalPosition: {x: -5.1, y: 1.9674001, z: -11.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 933202095}
@@ -36339,7 +36351,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 4741bfaa02374e5429a871714918d027, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.184
+  m_Volume: 0.336
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -37857,8 +37869,9 @@ MonoBehaviour:
       m_Calls: []
   m_text: MENU
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3cde2d431ff3a704081038583fff754d, type: 2}
+  m_sharedMaterial: {fileID: -7465557498985130907, guid: 3cde2d431ff3a704081038583fff754d,
+    type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

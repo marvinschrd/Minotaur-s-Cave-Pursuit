@@ -12,12 +12,12 @@ GameObject:
   - component: {fileID: 6321393817384438308}
   - component: {fileID: 6321393817384438309}
   - component: {fileID: 8541574785666687496}
-  - component: {fileID: 237217579651991703}
   - component: {fileID: 6321393817384438310}
   - component: {fileID: 6321393817384438311}
   - component: {fileID: 6321393817384438313}
   - component: {fileID: 306279631}
   - component: {fileID: 306279632}
+  - component: {fileID: 8604828160437776924}
   m_Layer: 0
   m_Name: bat
   m_TagString: Untagged
@@ -125,19 +125,6 @@ MonoBehaviour:
   animator: {fileID: 6321393817384438309}
   damage: 10
   speed: 1
---- !u!114 &237217579651991703
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6321393817384438314}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15d2129d8b66cbe4c8c5f6daea8946a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  squeak: {fileID: 306279631}
 --- !u!114 &6321393817384438310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -393,6 +380,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &8604828160437776924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6321393817384438314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15d2129d8b66cbe4c8c5f6daea8946a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  squeak: {fileID: 306279631}
 --- !u!1 &6494130481553309970
 GameObject:
   m_ObjectHideFlags: 0
