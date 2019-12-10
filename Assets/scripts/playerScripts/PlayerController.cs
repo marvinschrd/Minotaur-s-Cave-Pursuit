@@ -185,5 +185,4 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawLine((Vector2)transform.position, (Vector2)transform.position + Vector2.right * raycastJumpLength);
         Gizmos.DrawLine((Vector2)transform.position, (Vector2)transform.position + Vector2.left * raycastJumpLength);
     }
-   
 }

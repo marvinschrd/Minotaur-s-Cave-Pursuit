@@ -9,7 +9,6 @@ public class respawnDetector : MonoBehaviour
     {
         if(collision.gameObject.GetComponent<PlayerController>() != null)
         {
-            Debug.Log("detected");
             PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
             PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
             playerHealth.TakeDamage(damage);

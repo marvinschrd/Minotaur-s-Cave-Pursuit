@@ -20,7 +20,6 @@ public class CrushingBlock : MonoBehaviour
         body = transform.GetComponent<Rigidbody2D>();
         upPosition = transform.position;
     }
-
     enum State
     {
         IDLE,
@@ -34,7 +33,6 @@ public class CrushingBlock : MonoBehaviour
         switch (state)
         {
             case State.IDLE:
-                Debug.Log("idle");
                 timeToFall = timerToFall;
                 timeToUp = TimerToUp;
                 hitGround = false;
@@ -56,7 +54,6 @@ public class CrushingBlock : MonoBehaviour
                 break;
             case State.WAITING:
                 {
-                    Debug.Log("witig");
                     body.gravityScale = 0;
                     timeToUp -= Time.deltaTime;
                     if (timeToUp <= 0)

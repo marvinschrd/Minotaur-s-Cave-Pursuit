@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class arrowShooter : MonoBehaviour
 {
-
     [SerializeField] GameObject prefabArrow;
     [SerializeField] Transform arrowSpawnPoint;
     [SerializeField] AudioSource arrowSound;

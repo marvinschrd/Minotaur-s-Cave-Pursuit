@@ -8,8 +8,7 @@ public class healthDisplay : MonoBehaviour
    public void setHealth(float currentHealth,float maxHealth)
     {
         currentHealth = currentHealth / maxHealth;
-        Debug.Log("health =" +currentHealth);
-       transform.localScale = new Vector2(currentHealth, 1f);
+        transform.localScale = new Vector2(currentHealth, 1f);
         if(currentHealth <= 0)
         {
             transform.localScale = new Vector2(0f, 1f);

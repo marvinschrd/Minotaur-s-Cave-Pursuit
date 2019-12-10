@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class checkpoint : MonoBehaviour
 {
-
-    private Vector2 checkPointPosition;
+    Vector2 checkPointPosition;
     private void Start()
     {
         checkPointPosition = transform.position;
@@ -14,10 +13,8 @@ public class checkpoint : MonoBehaviour
     {
         if (collision.gameObject.GetComponent<PlayerController>() != null)
         {
-            Debug.Log("okay");
             PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
-            playerController.checkpointReached(checkPointPosition);
-            
+            playerController.checkpointReached(checkPointPosition);   
         }
     }
 }

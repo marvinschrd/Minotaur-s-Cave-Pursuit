@@ -41,7 +41,6 @@ public class PlayerHealth : MonoBehaviour
             animator.SetBool("isDead", true);
         }
     }
-
     public void resetHealth()
     {
         if (lives >= 0)

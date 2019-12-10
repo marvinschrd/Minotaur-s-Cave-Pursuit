@@ -4,21 +4,13 @@ using UnityEngine;
 
 public class speech : MonoBehaviour
 {
-    // Start is called before the first frame update
     SpriteRenderer spriteRenderer;
     [SerializeField]SpriteRenderer spriteRendererInBubble;
     void Start()
     {
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-        //spriteRendererKey = gameObject.GetComponentInChildren<SpriteRenderer>();
         spriteRenderer.enabled = false;
         spriteRendererInBubble.enabled = false;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {

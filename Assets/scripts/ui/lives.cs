@@ -10,10 +10,8 @@ public class lives : MonoBehaviour
     [SerializeField] Image life3;
     public void updateLives(int life)
     {
-        Debug.Log("life =" + life);
         switch (life)
         {
-            
             case 3:
                 break;
             case 2:
