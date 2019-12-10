@@ -136,19 +136,19 @@ TextureImporter:
     second: Dwarf_Sprite_Sheet1.2v_43
   - first:
       213: -2418577532948901273
-    second: Dwarf_Sprite_Sheet1.2v_44
+    second: idleL1
   - first:
       213: 4866249526264341381
-    second: Dwarf_Sprite_Sheet1.2v_45
+    second: idleL2
   - first:
       213: 7296446379884031325
-    second: Dwarf_Sprite_Sheet1.2v_46
+    second: idleL3
   - first:
       213: -4930893413976830160
-    second: Dwarf_Sprite_Sheet1.2v_47
+    second: idleL4
   - first:
       213: -7081404071384037950
-    second: Dwarf_Sprite_Sheet1.2v_48
+    second: idleL5
   - first:
       213: -9003805367618557409
     second: Dwarf_Sprite_Sheet1.2v_49
@@ -1298,7 +1298,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dwarf_Sprite_Sheet1.2v_44
+      name: idleL1
       rect:
         serializedVersion: 2
         x: 2
@@ -1319,13 +1319,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dwarf_Sprite_Sheet1.2v_45
+      name: idleL2
       rect:
         serializedVersion: 2
         x: 39
         y: 226
         width: 26
-        height: 17
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1340,13 +1340,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dwarf_Sprite_Sheet1.2v_46
+      name: idleL3
       rect:
         serializedVersion: 2
         x: 78
         y: 226
         width: 24
-        height: 18
+        height: 19
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1361,7 +1361,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dwarf_Sprite_Sheet1.2v_47
+      name: idleL4
       rect:
         serializedVersion: 2
         x: 116
@@ -1382,7 +1382,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dwarf_Sprite_Sheet1.2v_48
+      name: idleL5
       rect:
         serializedVersion: 2
         x: 154

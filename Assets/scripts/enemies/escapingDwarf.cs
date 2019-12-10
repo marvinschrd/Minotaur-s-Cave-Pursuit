@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class escapingDwarf : MonoBehaviour
 {
@@ -96,6 +97,10 @@ public class escapingDwarf : MonoBehaviour
         state = State.RUN;
     }
 
+    void loadWinningScene()
+    {
+        SceneManager.LoadScene("Winning");
+    }
     private void OnBecameInvisible()
     {
         if (run)

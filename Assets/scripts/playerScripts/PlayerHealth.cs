@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -43,8 +44,11 @@ public class PlayerHealth : MonoBehaviour
 
     public void resetHealth()
     {
-        currentHealth = maxHealth;
-        healtBar.setHealth(currentHealth, maxHealth);
+        if (lives >= 0)
+        {
+            currentHealth = maxHealth;
+            healtBar.setHealth(currentHealth, maxHealth);
+        }
     }
     void Update()
     {
@@ -53,6 +57,7 @@ public class PlayerHealth : MonoBehaviour
         {
             animator.SetBool("isHurt", false);
         }
+        loadGameOverScene();
     }
     public void TakeHealth(int health)
     {
@@ -68,5 +73,13 @@ public void loseLife()
     {
         lives--;
         life.updateLives(lives);
+    }
+    void loadGameOverScene()
+    {
+        if(lives<=0&&currentHealth<=0)
+        {
+            Debug.Log("dead");
+            SceneManager.LoadScene("GameOver");
+        }
     }
 }

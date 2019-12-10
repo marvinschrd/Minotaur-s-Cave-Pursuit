@@ -95,10 +95,10 @@ public class PlayerController : MonoBehaviour
     }
     public void Respawn()
     {
-        Animator.SetBool("isDead", false);
         transform.position = checkpointPosition;
         playerHealth.loseLife();
         playerHealth.resetHealth();
+        Animator.SetBool("isDead", false);
     }
     void Update()
     {
